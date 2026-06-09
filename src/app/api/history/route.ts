@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
     );
 
     // Map DB fields to JSON camelCase response
-    const history = result.rows.map(row => ({
+    const history = result.rows.map((row: any) => ({
       id: row.id,
       filename: row.filename,
       jobDescription: row.job_description,
